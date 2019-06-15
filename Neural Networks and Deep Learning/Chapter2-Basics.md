@@ -25,5 +25,72 @@
 由于有两个参数w和b，所以可以在更新w和更新b之间进行循环迭代。
 ![Chapte2-4-3](../imgs/Chapter2-4-2.jpg)
 
+## 5. Derivatives(导数)
+导数=斜率（slope）
+
+## 6. More derivative examples
+略
+
+## 7. Computation graph
+正向传播计算出神经网络的输出，反向计算出斜率/导数
+J(a,b,c)=3(a+bc)
+计算步骤：bc=u，V=a+u，J=3V  
+![Chapter2-7-1](../imgs/Chapter-2-7-1.jpeg)
+
+## 8. Derivatives with a Computation Graph
+略
+
+## 9. Logistic Regerssion Gradient Descent
+![Chapter2-9-1](../imgs/Chapter2-9-1.jpeg)
+
+## 10. Gradient Descent on m Examples
+![Chapter2-10-1](../imgs/Chapter-2-10-1.jpeg)
+可以用矢量化计算代替显式的For循环，提高代码的效率
+
+# Python and Vectorization
+## 11. Vectorization
+- what is vectorization?
+![Chapter-2-11-1](../imgs/Chapter-2-11-1.jpeg)
+- 如果使用了bulit-in指令，比如np.dot，numpy就会利用并行化去更快的计算，GPU会更擅长做并行化计算
+- 尽量使用显性的for循环
+
+## 12. More Vectorization Examples
+向量中的每个元素做指数计算, 对数计算，计算绝对值, 每当要用for循环时可以看一下是否可以利用numpy内置函数
+```python
+import numpy as np
+u = np.exp(v)
+np.log(v)
+np.abs(v)
+np.maxium(v, o)
+```
+
+## 13. Vertorizing Logistic Regression(计算推测值)
+![Chapter2-13-1](../imgs/Chapter2-13-1.jpeg)
+
+## 14. Vectorizing Logistic Regression's Gradient Output(计算梯度)
+![Chapter2-14-1](../imgs/Chapter2-14-1.jpeg)
+![Chapter2-14-2](../imgs/Chapter2-14-2.jpeg)
+
+## 15. Broadcasting in Python
+广播是python代码中使得特定代码更加高效的技术  
+以下是广播的原则  
+![Chapter2-15-1](../imgs/Chapter2-15-1.png)
+
+## 16. A note on python/numpy vectors
+- 不要使用秩为1的矩阵
+- 可以加入断言，减少bug
+```python
+assert(a.shape == (5, 1))
+```
+
+## 17. Quick tour of Jupyter/iPython Notebooks
+略
+
+## 18. Explanation of logistic regression cost function
+
+
+
+
+
 
 
